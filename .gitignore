@@ -3,3 +3,17 @@ data/
 __pycache__/
 *.pyc
 
+*.npy
+laere_analog_export/
+results/*.npy
+*.pth
+EOF && \
+# Re-stage just the updated gitignore
+git add .gitignore && \
+# Verify clean staging
+echo "=== Final staged files ===" && \
+git diff --cached --stat && \
+echo && \
+echo "=== Untracked large files (will NOT commit) ===" && \
+git status --short | grep "??" | grep -E "\.(pth|npy)$"
+*.pth
