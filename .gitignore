@@ -1,19 +1,25 @@
-.venv/
-data/
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
 
+# Virtual environments
+.venv/
+venv/
+aihwkit_env/
+env/
+
+# Data files
+data/
 *.npy
-laere_analog_export/
+*.pth
 results/*.npy
-*.pth
-EOF && \
-# Re-stage just the updated gitignore
-git add .gitignore && \
-# Verify clean staging
-echo "=== Final staged files ===" && \
-git diff --cached --stat && \
-echo && \
-echo "=== Untracked large files (will NOT commit) ===" && \
-git status --short | grep "??" | grep -E "\.(pth|npy)$"
-*.pth
+results/*.pth
+laere_analog_export/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+

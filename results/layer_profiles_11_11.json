@@ -1,0 +1,147 @@
+[
+  {
+    "layer": 11,
+    "matrices": {
+      "q_proj_eta_0": {
+        "mse": 0.15584494173526764,
+        "relative_error": 3.971306562423706,
+        "shape": [
+          2048,
+          2048
+        ],
+        "num_weights": 4194304,
+        "num_pcm_devices": 8388608
+      },
+      "q_proj_eta_038": {
+        "mse": 0.21355989575386047,
+        "relative_error": 7.122718811035156,
+        "shape": [
+          2048,
+          2048
+        ],
+        "num_weights": 4194304,
+        "num_pcm_devices": 8388608
+      },
+      "k_proj_eta_0": {
+        "mse": 0.16128282248973846,
+        "relative_error": 1.1465284824371338,
+        "shape": [
+          256,
+          2048
+        ],
+        "num_weights": 524288,
+        "num_pcm_devices": 1048576
+      },
+      "k_proj_eta_038": {
+        "mse": 0.25921767950057983,
+        "relative_error": 1.5017343759536743,
+        "shape": [
+          256,
+          2048
+        ],
+        "num_weights": 524288,
+        "num_pcm_devices": 1048576
+      },
+      "v_proj_eta_0": {
+        "mse": 0.1559525728225708,
+        "relative_error": 3.9614434242248535,
+        "shape": [
+          256,
+          2048
+        ],
+        "num_weights": 524288,
+        "num_pcm_devices": 1048576
+      },
+      "v_proj_eta_038": {
+        "mse": 0.18717095255851746,
+        "relative_error": 4.514389991760254,
+        "shape": [
+          256,
+          2048
+        ],
+        "num_weights": 524288,
+        "num_pcm_devices": 1048576
+      },
+      "o_proj_eta_0": {
+        "mse": 0.16375431418418884,
+        "relative_error": 3.6360232830047607,
+        "shape": [
+          2048,
+          2048
+        ],
+        "num_weights": 4194304,
+        "num_pcm_devices": 8388608
+      },
+      "o_proj_eta_038": {
+        "mse": 0.20065490901470184,
+        "relative_error": 4.03859806060791,
+        "shape": [
+          2048,
+          2048
+        ],
+        "num_weights": 4194304,
+        "num_pcm_devices": 8388608
+      },
+      "gate_proj_eta_0": {
+        "mse": 0.1593238115310669,
+        "relative_error": 4.196681022644043,
+        "shape": [
+          5632,
+          2048
+        ],
+        "num_weights": 11534336,
+        "num_pcm_devices": 23068672
+      },
+      "gate_proj_eta_038": {
+        "mse": 0.20928959548473358,
+        "relative_error": 4.043424129486084,
+        "shape": [
+          5632,
+          2048
+        ],
+        "num_weights": 11534336,
+        "num_pcm_devices": 23068672
+      },
+      "up_proj_eta_0": {
+        "mse": 0.15657739341259003,
+        "relative_error": 3.4683966636657715,
+        "shape": [
+          5632,
+          2048
+        ],
+        "num_weights": 11534336,
+        "num_pcm_devices": 23068672
+      },
+      "up_proj_eta_038": {
+        "mse": 0.19449615478515625,
+        "relative_error": 4.513485908508301,
+        "shape": [
+          5632,
+          2048
+        ],
+        "num_weights": 11534336,
+        "num_pcm_devices": 23068672
+      },
+      "down_proj_eta_0": {
+        "mse": 0.4458146095275879,
+        "relative_error": 5.052908897399902,
+        "shape": [
+          2048,
+          5632
+        ],
+        "num_weights": 11534336,
+        "num_pcm_devices": 23068672
+      },
+      "down_proj_eta_038": {
+        "mse": 0.5595009922981262,
+        "relative_error": 13.888036727905273,
+        "shape": [
+          2048,
+          5632
+        ],
+        "num_weights": 11534336,
+        "num_pcm_devices": 23068672
+      }
+    }
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "model": "HuggingFaceTB/SmolLM2-135M",
+  "target_layers": [
+    18,
+    19,
+    20,
+    21
+  ],
+  "noise_eta": 0.038,
+  "num_samples": 10,
+  "digital_perplexity": 11.194895116507906,
+  "analog_perplexity": 13.045686461700058,
+  "absolute_degradation": 1.8507913451921514,
+  "percent_degradation": 16.532458106400558,
+  "ratio": 1.1653245810640056,
+  "verdict": "YELLOW \u2014 Marginal, try selective mapping"
+}
