@@ -1,0 +1,22 @@
+{
+  "model": "HuggingFaceTB/SmolLM2-135M",
+  "target_layers": [
+    18,
+    19,
+    20,
+    21
+  ],
+  "mapped_matrices": [
+    "k_proj",
+    "o_proj"
+  ],
+  "noise_eta": 0.038,
+  "num_samples": 10,
+  "digital_perplexity": 11.194895116507906,
+  "analog_perplexity": 11.73146946006602,
+  "absolute_degradation": 0.5365743435581134,
+  "percent_degradation": 4.793026982154437,
+  "ratio": 1.0479302698215445,
+  "verdict": "GREEN \u2014 Excellent analog viability!",
+  "comparison_to_full_mapping": "Full 7-matrix mapping was +16.5%, selective 2-matrix is expected lower"
+}
