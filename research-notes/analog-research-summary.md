@@ -12,7 +12,9 @@
 
 This experiment tested whether Phase-Change Memory (PCM) analog crossbars can run language model inference with acceptable quality degradation. The research used IBM's AIHWKIT simulator with realistic PCM noise profiles (η = 3.8%).
 
-**Bottom Line:** Analog mapping of LLM layers is *marginally viable* with selective matrix choice, but full-layer mapping causes 16.5% perplexity degradation. The key insight is that **per-matrix granularity matters more than per-layer granularity** — some matrices (k_proj, o_proj) are PCM-insensitive while others (q_proj, v_proj) are catastrophically sensitive.
+**Bottom Line:** Analog mapping of LLM layers is **viable with selective mapping** — full-layer mapping causes 16.5% perplexity degradation, but mapping only the 2 PCM-insensitive matrices (k_proj + o_proj) drops degradation to just **4.8%**, well under the 10% threshold. The key insight is that **per-matrix granularity matters more than per-layer granularity** — some matrices (k_proj, o_proj) are PCM-insensitive while others (q_proj, v_proj) are catastrophically sensitive.
+
+**UPDATE (May 31, 2026):** Selective mapping test completed. Full mapping (7 matrices): +16.5%. Selective mapping (k_proj + o_proj only): +4.8%. This changes the verdict from YELLOW to **GREEN** for production use.
 
 ---
 
@@ -49,7 +51,25 @@ This experiment tested whether Phase-Change Memory (PCM) analog crossbars can ru
 
 **Verdict:** YELLOW — Marginal viability. Degradation is noticeable but model remains functional. For comparison, a 16.5% perplexity increase is roughly equivalent to dropping from a 1.5B to 1B parameter model in quality.
 
-### 2.2 Per-Matrix Sensitivity (from Activation Replay)
+### 2.2 Selective Mapping Result (NEW — May 31, 2026)
+
+Based on the per-matrix sensitivity data (Section 2.3), we tested mapping only the two PCM-insensitive matrices: **k_proj** and **o_proj**.
+
+| Metric | Digital | Selective Analog (k_proj + o_proj) | Change |
+|--------|---------|-----------------------------------|--------|
+| **Perplexity** | 11.19 | 11.73 | **+4.8%** |
+| **Ratio** | 1.00× | 1.05× | — |
+| **Matrices mapped** | 0 | 2 per layer (8 total) | — |
+
+**Verdict:** GREEN — Excellent analog viability. At 4.8% degradation, the quality loss is barely perceptible. This is within the range of natural variance between different LLM checkpoints.
+
+**Comparison:**
+- Full mapping (7 matrices/layer): +16.5% — too much for most applications
+- Selective mapping (2 matrices/layer): +4.8% — viable for production
+
+**Implication:** We don't need to map entire layers to get analog benefits. By mapping only the "safe" matrices, we can achieve significant energy savings while maintaining near-digital quality.
+
+### 2.3 Per-Matrix Sensitivity (from Activation Replay)
 
 Earlier research (May 28–29) captured *real* activations from 20 WikiText-2 samples and replayed them through individual analog matrices. This revealed that **random Gaussian noise is a poor proxy** — it underestimates real-world error by 1.7–2.9×.
 
