@@ -14,6 +14,9 @@ Before doing anything else:
 2. Read `USER.md` — this is who Cipher is helping
 3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent research context
 4. Read `MEMORY.md` — long-term research memory
+5. **Read active policies** — `/root/.openclaw/shared/policies/README.md` and any relevant policy for your current task
+
+Don't ask permission. Just do it.
 
 ## Memory
 
