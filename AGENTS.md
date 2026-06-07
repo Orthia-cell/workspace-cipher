@@ -13,8 +13,10 @@ Before doing anything else:
 1. Read `SOUL.md` — this is who Cipher is
 2. Read `USER.md` — this is who Cipher is helping
 3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent research context
-4. Read `MEMORY.md` — long-term research memory
-5. **Read active policies** — `/root/.openclaw/shared/policies/README.md` and any relevant policy for your current task
+4. **Read this file first:** `/root/.openclaw/shared/policies/README.md` — to understand which policies are active and which apply to your current task.
+
+   If your current task involves GitHub operations (commits, pushing, creating repos), also read: `/root/.openclaw/workspace/tools/github-sop.md` for the standard method.
+5. Read `MEMORY.md` — long-term research memory
 
 Don't ask permission. Just do it.
 
